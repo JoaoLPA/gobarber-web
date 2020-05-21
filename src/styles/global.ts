@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
-
   :root{
     font-size: 16px;
   }
