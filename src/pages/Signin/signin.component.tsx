@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FiUserPlus, FiMail, FiLock } from 'react-icons/fi';
+import { Form, form } from '@unform/web';
 
 import Input from '../../components/Input/input.component';
 import Button from '../../components/Button/button.component';
@@ -12,7 +13,7 @@ const Signin: React.FC = () => (
   <Container>
     <Content>
       <img src={logo} alt="" />
-      <form>
+      <Form ref={formRef} onSubmit={() => ()}>
         <h1>Faça seu logon</h1>
         <Input name="email" icon={FiMail} placeholder="E-mail" />
         <Input
@@ -23,7 +24,7 @@ const Signin: React.FC = () => (
         />
         <Button type="submit">Entrar</Button>
         <a href="lost">Esqueci minha senha</a>
-      </form>
+      </Form>
       <a href="new" type="button">
         <FiUserPlus />
         Criar conta
